@@ -1,0 +1,2 @@
+<button *ngIf="!isConnected" (click)="connect()" class="btn btn-warning">connect</button>
+<button *ngIf="!isConnected" class="btn btn-success">{{connectedAddress | Address}}</button>

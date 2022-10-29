@@ -1,0 +1,87 @@
+@import url(https://fonts.google.com/specimen/Varela+Round#styles);
+body{
+  font-family: 'Varela Round';
+}
+#nav-color{
+  background: linear-gradient(180deg, #D9FDFF 0% 100%);
+}
+#registrarse{
+  border-color: #F86D12;
+  background: #F86D12;
+  border-radius: 40px;
+}
+#header-main{
+  min-height: 100vh;
+}
+#presentacion{
+  background: linear-gradient(95.18deg, #EF6104 -4.04%, #FFBA8D 90.59%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+#imagen-principal{
+  width: 72px;
+  height: 72px;
+}
+#beneficios{
+  height: 70%;
+  width: 100%;
+}
+#beneficios-2{
+  background: #174A4D;
+  height: 600px;
+  width: 100%;
+  background: linear-gradient(180deg, #1F585B 0%, #2EA5AC 51.35%, rgba(31, 88, 91, 0) 100%);
+}
+#listo{
+  background: linear-gradient(91.84deg, #347C80 -0.87%, #66D9E0 101.12%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#empieza{
+  position: absolute;
+  width: 598px;
+  height: 36px;
+  left: 176px;
+  top: 541px;
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.3px;
+  color: #000000;
+}
+
+
+
+#registrarme{
+  width: 375.04px;
+  height: 103px;
+  border-color: #F86D12;
+  background: #F86D12;
+  border-radius: 40px;
+}
+#group-2{
+  background: #262626;
+}
+#footer-text{
+width: 649px;
+height: 91px;
+left: 301px;
+top: 2144px;
+font-family: 'Arial Rounded MT Bold';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 17px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.3px;
+color: #FFFFFF;
+}
