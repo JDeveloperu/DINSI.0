@@ -1,0 +1,30 @@
+{
+  "name": "solpagos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "truffle test --compile-none",
+    "compile": "truffle compile",
+    "size": "truffle compile",
+    "run": "ganache-cli",
+    "watch": "nodemon --ext sol,js --ignore build --ignore examples --exec \"npm run compile && npm run test\"",
+    "watch:sol": "nodemon --ext sol --ignore build --ignore examples --exec \"npm run compile\"",
+    "watch:test": "nodemon --ext js,json --exec \"npm run test\"",
+    "watch:cv": "nodemon --ext js --ignore build --ignore examples --exec \"truffle run coverage\"",
+    "watch:size": "nodemon --ext json --exec \"truffle run contract-size\"",
+    "debug": "node --inspect-brk ./node_modules/truffle/build/cli.bundled.js test test/vantra.js",
+    "ide": "remixd -s C:\\Users\\Luciano\\Documents\\Svn\\Proyectos\\Websites\\vantra-finance\\contracts --remix-ide https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.7.6+commit.7338295f.js",
+    "migrate:bsc": "truffle migrate --reset --network bsc",
+    "migrate:bscTestnet": "truffle migrate --reset --network bscTestnet"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.6.0",
+    "@openzeppelin/contracts-upgradeable": "^4.5.2",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "@openzeppelin/truffle-upgrades": "^1.15.0"
+  }
+}
