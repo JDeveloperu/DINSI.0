@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-6">
+    <h3>Add new order</h3>
+    <form>
+      <div class="form-group">
+        <label for="new-order-amount">Amount (USD)</label>
+        <input id="new-order-amount" class="form-control" type="text" autocomplete="off" name="new-order-amount"
+          [(ngModel)]="newOrderAmount" />
+      </div>
+      <div class="form-group">
+        <label for="new-order-reason">Reason</label>
+        <input id="new-order-reason" class="form-control" type="text" autocomplete="off" name="new-order-reason"
+          [(ngModel)]="newOrderReason" />
+      </div>
+
+      <button class="btn btn-success mt-3" (click)="addNewOrder()">Add order</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-8">
+    <div class="card bg-primary">
+      <div class="card-header text-light">
+        <p class="m-0 p-0" *ngIf="isOwner">Welcome, administrator</p>
+        <p class="m-0 p-0" *ngIf="isGuest">Welcome, guest user</p>
+        <p class="m-0 p-0" *ngIf="isMember || isInvestor">Welcome, {{ userName }}</p>
+      </div>
+      <div class="card-body bg-light text-dark">
+        <app-guest-area *ngIf="isGuest" (reloadClick)="reload()"></app-guest-area>
+        <app-owner-area *ngIf="isOwner"></app-owner-area>
+        <app-member-area *ngIf="isMember"></app-member-area>
+        <app-investor-area *ngIf="isInvestor"></app-investor-area>
+      </div>
+    </div>
+    <br>
+    <div class="card bg-primary" *ngIf="isMember || isInvestor">
+      <div class="card-header text-light">
+        <p class="m-0 p-0">Movements</p>
+      </div>
+      <div class="card-body bg-light text-dark">
+        <pre>{{ movements | json }}</pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4 d-flex flex-column">
+    <div class="d-flex flex-row-reverse">
+      <app-information-card class="card-wrapper"></app-information-card>
+    </div>
+    <div class="mt-4 d-flex flex-row-reverse">
+      <app-order-card class="card-wrapper"></app-order-card>
+    </div>
+  </div>
+</div>

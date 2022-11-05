@@ -1,0 +1,24 @@
+<div class="card bg-primary">
+  <div class="card-header text-light">Current order</div>
+  <ul class="list-group list-group-flush">
+    <li *ngIf="!isConnected" class="list-group-item">Connect your wallet to view the order.</li>
+    <ng-container *ngIf="isConnected">
+      <li *ngIf="isOrderEmpty" class="list-group-item">No order found.</li>
+
+      <ng-container *ngIf="!isOrderEmpty">
+        <li class="list-group-item" *ngIf="!!to">To: {{ to.name }} ({{ order.to | address }})</li>
+        <li class="list-group-item">Amount: {{ order.amount | bignumber }} DAI</li>
+        <li class="list-group-item">Reason: {{ order.reason }}</li>
+        <li class="list-group-item">Approved by member?: {{ order.approved }}</li>
+        <li class="list-group-item">Approved by investor?: {{ order.approvedByInvestor }}</li>
+        <li class="list-group-item">Is finished?: {{ order.finished }}</li>
+      </ng-container>
+    </ng-container>
+  </ul>
+  <div class="card-body bg-light d-grid gap-2" *ngIf="isConnected && !isOrderEmpty && !isOrderFinished">
+    <button *ngIf="!canApproveOrder" class="btn btn-success disabled" title="You cannot approve the order." disabled>Approve</button>
+    <button *ngIf="canApproveOrder" class="btn btn-success" (click)="approveOrder()">Approve</button>
+    <button *ngIf="!canApproveOrder" class="btn btn-danger disabled" title="You cannot reject the order." disabled>Reject</button>
+    <button *ngIf="canApproveOrder" class="btn btn-danger" (click)="rejectOrder()">Reject</button>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="card bg-primary">
+  <div class="card-header text-light">Information</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Token: {{ blockchain.tokenAddress | address }}</li>
+    <li class="list-group-item">Contract: {{ blockchain.contractAddress | address }}</li>
+    <li *ngIf="owner" class="list-group-item">Owner: {{ owner | address }}</li>
+    <li *ngIf="balance" class="list-group-item">Balance: {{ balance | bignumber }} DAI</li>
+    <li *ngIf="userType>-1" class="list-group-item">User type: {{ userType }}</li>
+  </ul>
+</div>
